@@ -7,7 +7,7 @@ import { useLocation } from '@reach/router'
 import searchIcon from '../assets/nav-search.png'
 import { Posts } from './Posts'
 
-export const Search = ({ data, section }) => {
+export const Search = ({ data, section, categoryFilter = '' }) => {
   const location = useLocation()
   const searchRef = useRef(null)
   const { search } = queryString.parse(location.search)
@@ -20,12 +20,19 @@ export const Search = ({ data, section }) => {
       }
     }
   `)
-
-  const results = useFlexSearch(
+  const flexResults = useFlexSearch(
     query,
     localSearchPages.index,
     localSearchPages.store
   )
+  let results = flexResults
+  if (categoryFilter) {
+    results = flexResults.filter(
+      (result) => result.categories
+        .map((category) => category.toLowerCase())
+        .includes(categoryFilter.toLowerCase())
+    )
+  }
 
   return (
     <>
@@ -35,7 +42,7 @@ export const Search = ({ data, section }) => {
           id="search"
           type="search"
           className="searchbar"
-          placeholder="Search posts..."
+          placeholder={`Search ${section}...`}
           value={query}
           autoComplete="off"
           onChange={(event) => {

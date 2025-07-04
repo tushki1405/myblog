@@ -37,6 +37,8 @@ export const PostSidebar = ({ thumbnail, toc, tags = [], date }) => {
     }
   }, [activeHash])
 
+  // TODO: change "Published" to different tags based on type. E.g. recipe posts
+  // can say "First tried on"
   return (
     <aside className="post-sidebar">
       <div className="post-sidebar-content">

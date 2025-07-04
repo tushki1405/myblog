@@ -15,8 +15,8 @@ export default function Notes({ data }) {
   const posts = data.posts.edges
   const simplifiedPosts = useMemo(() => getSimplifiedPosts(posts), [posts])
   const title = 'Notes'
-  const description =
-    'Personal notes about life, music, projects, and everything else.'
+  // TODO add description
+  const description = ''
 
   return (
     <>
@@ -24,8 +24,8 @@ export default function Notes({ data }) {
       <SEO customDescription={description} />
 
       <PageLayout>
-        <Hero title={title} description={description} hasSearch image={blog} />
-        <Search data={simplifiedPosts} section="notes" />
+        <Hero title={title} description={description} hasSearch />
+        <Search data={simplifiedPosts} section="notes" categoryFilter="notes" />
       </PageLayout>
     </>
   )
@@ -40,7 +40,7 @@ export const notesQuery = graphql`
       filter: {
         frontmatter: {
           template: { eq: "post" }
-          categories: { eq: "Personal" }
+          categories: { eq: "Notes" }
         }
       }
     ) {

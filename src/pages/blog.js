@@ -20,7 +20,6 @@ export default function Blog({ data }) {
       {
         'Guides, references, and tutorials on programming, web development, and design. '
       }
-      <Link to="/topics">View All Topics.</Link>
     </div>
   )
 
@@ -46,7 +45,7 @@ export const articlesQuery = graphql`
       filter: {
         frontmatter: {
           template: { eq: "post" }
-          categories: { eq: "Technical" }
+          categories: { eq: "Blog" }
         }
       }
     ) {

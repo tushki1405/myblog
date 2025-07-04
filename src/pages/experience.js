@@ -8,11 +8,12 @@ import { SEO } from '../components/SEO'
 import { Hero } from '../components/Hero'
 import { PageLayout } from '../components/PageLayout'
 import config from '../utils/config'
-import { projectsList } from '../data/projectsList'
+import { experienceList } from '../data/experienceList'
 
+// TODO - delete this page if not planning to use it
 export default function Projects() {
   const [repos, setRepos] = useState([])
-  const title = 'Projects'
+  const title = 'Work experience'
   const description =
     "Open-source projects I've made over the years, including this website, an emulator, and various games, apps, frameworks, and boilerplates."
 
@@ -41,7 +42,7 @@ export default function Projects() {
         <Hero title={title} description={description} />
 
         <div className="cards">
-          {projectsList.map((project) => {
+          {experienceList.map((project) => {
             return (
               <div className="card" key={project.slug}>
                 <div className="stars">

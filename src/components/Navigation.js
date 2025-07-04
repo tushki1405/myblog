@@ -2,26 +2,29 @@ import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import { SocialIcon } from 'react-social-icons'
 
-import floppy from '../assets/floppylogo.png'
-import floppyLogo from '../assets/nav-floppy.png'
+import monsteraLogo from '../assets/monstera.png'
 import blog from '../assets/nav-blog.png'
 import projects from '../assets/nav-projects.png'
 import github from '../assets/nav-github.png'
+import pizza from '../assets/nav-pizza.png'
 import { Moon } from '../assets/Moon'
 import { Sun } from '../assets/Sun'
 import { Menu } from '../assets/Menu'
 import { Close } from '../assets/Close'
 
+// TODO: update links
 const links = [
+  { url: '/recipes', label: 'Recipes', image: pizza },
   { url: '/notes', label: 'Notes', image: blog },
   { url: '/blog', label: 'Blog', image: projects },
-  { url: '/projects', label: 'Projects', image: github },
-  { url: '/me', label: 'About', image: floppy },
+  // { url: '/experience', label: 'Work experience', image: github },
+  { url: '/me', label: 'About', image: monsteraLogo },
 ]
 
 const socialLinks = [
-  { url: 'https://github.com/taniarascia' },
-  { url: 'https://bsky.app/profile/tania.dev' },
+  { url: 'https://github.com/tushki1405' },
+  { url: 'https://www.linkedin.com/in/tushargupta14/' },
+  { url: 'https://www.instagram.com/tushki1405/' },
 ]
 
 export const Navigation = ({ handleUpdateTheme, theme }) => {
@@ -34,7 +37,7 @@ export const Navigation = ({ handleUpdateTheme, theme }) => {
   const handleCloseMobileNav = () => {
     setNavOpen(false)
   }
-
+  // TODO: update github link
   return (
     <header className="navbar">
       <div className="navbar-title">
@@ -42,13 +45,12 @@ export const Navigation = ({ handleUpdateTheme, theme }) => {
           <Link to="/" className="navbar-title-link">
             <span>
               <img
-                src={floppyLogo}
+                src={monsteraLogo}
                 className="sidebar-logo"
-                alt="tania.dev"
-                title="💾"
+                alt="https:://tushki1405.github.io"
               />
             </span>
-            <span>tania.dev</span>
+            <span>tushki1405.github.io</span>
           </Link>
         </div>
       </div>

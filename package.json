@@ -1,9 +1,9 @@
 {
-  "name": "taniarascia.com",
+  "name": "tusharguptablog",
   "private": true,
   "version": "7.1",
-  "description": "Tania Rascia's personal website.",
-  "author": "Tania Rascia",
+  "description": "Tushar Gupta's personal website.",
+  "author": "Tushar Gupta",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/taniarascia/taniarascia.com"
+    "url": "https://github.com/tushki1405/myblog"
   },
   "dependencies": {
     "gatsby": "^5.14.3",

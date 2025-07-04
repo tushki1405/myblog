@@ -1,20 +1,32 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import floppy from '../assets/floppylogo.png'
-import react from '../../content/thumbnails/react.png'
-import css from '../../content/thumbnails/css-new.png'
-import js from '../../content/thumbnails/js.png'
-import mac from '../../content/thumbnails/apple.png'
-import mario from '../../content/thumbnails/mario.png'
-import tn from '../../content/thumbnails/tn.png'
-import accordion from '../../content/images/keyboardaccordionlogo.png'
-import animorphs from '../../content/thumbnails/animorphslogo.png'
-import pc from '../../content/thumbnails/computer.png'
-import bluesky from '../../content/thumbnails/bluesky.png'
-import rss from '../../content/thumbnails/rss.png'
+// import react from '../../content/thumbnails/react.png'
+// import css from '../../content/thumbnails/css-new.png'
+// import js from '../../content/thumbnails/js.png'
+// import mac from '../../content/thumbnails/apple.png'
+// import mario from '../../content/thumbnails/mario.png'
+// import tn from '../../content/thumbnails/tn.png'
+// import accordion from '../../content/images/keyboardaccordionlogo.png'
+// import animorphs from '../../content/thumbnails/animorphslogo.png'
+// import pc from '../../content/thumbnails/computer.png'
+// import bluesky from '../../content/thumbnails/bluesky.png'
+// import rss from '../../content/thumbnails/rss.png'
 
-import floppyLogo from '../assets/nav-floppy.png'
+import floppy from '../assets/floppylogo.png'
+import react from '../../content/thumbnails/konami.webp'
+import css from '../../content/thumbnails/konami.webp'
+import js from '../../content/thumbnails/konami.webp'
+import mac from '../../content/thumbnails/konami.webp'
+import mario from '../../content/thumbnails/konami.webp'
+import tn from '../../content/thumbnails/konami.webp'
+import accordion from '../../content/thumbnails/konami.webp'
+import animorphs from '../../content/thumbnails/konami.webp'
+import pc from '../../content/thumbnails/konami.webp'
+import bluesky from '../../content/thumbnails/konami.webp'
+import rss from '../../content/thumbnails/konami.webp'
+
+import monsteraLogo from '../assets/monstera.png'
 
 export const Sidebar = () => {
   const guides = [
@@ -86,13 +98,13 @@ export const Sidebar = () => {
           <Link to="/" className="sidebar-title-link">
             <span>
               <img
-                src={floppyLogo}
+                src={monsteraLogo}
                 className="sidebar-logo"
-                alt="tania.dev"
+                alt="tushki1405.github.io"
                 title="💾"
               />
             </span>
-            <span>tania.dev</span>
+            <span>tushki1405.github.io</span>
           </Link>
         </div>
         <div className="sidebar-container">
@@ -100,8 +112,9 @@ export const Sidebar = () => {
             <h2>About Me</h2>
             <div className="sidebar-content">
               <p>
-                I'm <Link to="/me">Tania</Link>, software engineer and
-                open-source creator. This is my digital garden. 🌱
+                I'm <Link to="/me">Tushar</Link>, a software engineer who loves 
+                code, cooking, and wandering. This is where I plant ideas and 
+                stories. 🌱
               </p>
             </div>
           </section>

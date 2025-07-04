@@ -1,13 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: "Tania's Website",
-    author: { name: 'Tania' },
+    title: "Tushar Gupta's Website",
+    author: { name: 'Tushar Gupta' },
     pathPrefix: '/',
-    siteUrl: 'https://tania.dev',
+    siteUrl: 'https://tushki1405.github.io',
     description:
-      'Software engineer and open-source creator. This is my digital garden.',
-    feedUrl: 'https://tania.dev/rss.xml',
-    logo: 'https://tania.dev/logo.png',
+      'Software engineer who loves code, cooking, and wandering. This is where I plant ideas and stories',
+    logo: '/logo.png',
   },
   plugins: [
     // ===================================================================================
@@ -18,10 +17,10 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: "Tania's Website",
-        short_name: 'tania.dev',
+        name: "Tushar Gupta's Website",
+        short_name: 'https://tushki1405.github.io',
         description:
-          'Software engineer and open source creator. This is my digital garden.',
+          'Software engineer who loves code, cooking, and wandering. This is where I plant ideas and stories',
         start_url: '/',
         background_color: 'white',
         // theme_color: '#959af8',
@@ -55,7 +54,7 @@ module.exports = {
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   custom_elements: [
                     { 'content:encoded': edge.node.html },
-                    { author: 'hello@taniarascia.com' },
+                    { author: 'tushki1405@gmail.com' },
                   ],
                 })
               })
@@ -85,7 +84,7 @@ module.exports = {
             }
             `,
             output: '/rss.xml',
-            title: 'tania.dev | RSS Feed',
+            title: 'TODO(add url) | RSS Feed',
           },
         ],
       },
@@ -134,7 +133,7 @@ module.exports = {
             resolve: 'gatsby-remark-images',
             options: {
               backgroundColor: 'transparent',
-              maxWidth: 590,
+              maxWidth: 500,
             },
           },
           'gatsby-remark-autolink-headers',
@@ -182,6 +181,7 @@ module.exports = {
                   tags
                   slug
                   date(formatString: "MMMM DD, YYYY")
+                  categories
                 }
                 rawMarkdownBody
               }
@@ -189,8 +189,8 @@ module.exports = {
           }
         `,
         ref: 'id',
-        index: ['title', 'tags'],
-        store: ['id', 'slug', 'title', 'tags', 'date'],
+        index: ['title'],
+        store: ['id', 'slug', 'title', 'tags', 'date', 'categories'],
         normalizer: ({ data }) =>
           data.allMarkdownRemark.nodes.map((node) => ({
             id: node.id,

@@ -1,4 +1,4 @@
-export const projectsList = [
+export const experienceList = [
   {
     name: 'tania.dev',
     date: '2022',
@@ -81,11 +81,5 @@ export const projectsList = [
     date: '2021',
     slug: 'chat',
     tagline: 'Socket.io chat app',
-  },
-  {
-    name: 'React Advanced Form',
-    date: '2022',
-    slug: 'react-advanced-form',
-    tagline: 'A schema-based form system',
   },
 ]

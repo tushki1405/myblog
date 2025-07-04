@@ -10,7 +10,6 @@ import { SEO } from '../components/SEO'
 import { Heading } from '../components/Heading'
 import { Hero } from '../components/Hero'
 import { PageLayout } from '../components/PageLayout'
-import { projectsList } from '../data/projectsList'
 import { getSimplifiedPosts } from '../utils/helpers'
 import config from '../utils/config'
 
@@ -35,19 +34,13 @@ export default function Index({ data }) {
       <SEO />
 
       <PageLayout>
-        <Hero title="Hey, I'm Tania!" type="index">
+        <Hero title="Hey, I'm Tushar!" type="index">
           <div className="hero-wrapper">
             <div>
               <p className="hero-description">
-                I'm a software engineer, open-source creator, and former
-                professional chef. I've been making websites since 1998 and{' '}
-                <Link to="/blog">writing on this blog</Link> for the past
-                decade.
-              </p>
-              <p className="hero-description">
-                I enjoy weight-lifting, reading sci-fi and fantasy, playing
-                retro video games, and spending time with my partner and
-                friends.
+              Welcome to my digital scrapbook — part kitchen, part trail diary,
+              part nerd cave. Expect delicious chaos: food, hikes, odd 
+              discoveries, and the occasional side quest in code.
               </p>
               <p className="flex gap">
                 <Link className="button" to="/me">
@@ -64,7 +57,7 @@ export default function Index({ data }) {
               </p>
             </div>
             <div>
-              <img src="/ram.png" className="hero-image" alt="RAM Ram" />
+              <img src="/elora_1.jpg" className="hero-image" alt="Elora in blankie" />
             </div>
           </div>
         </Hero>
@@ -111,50 +104,6 @@ export default function Index({ data }) {
                 </Link>
               )
             })}
-          </div>
-        </section>
-
-        <section>
-          <Heading
-            title="Projects"
-            slug="/projects"
-            buttonText="All Projects"
-            description="Open-source projects I've worked on over the years."
-          />
-
-          <div className="cards">
-            {projectsList
-              .filter((project) => project.highlight)
-              .map((project) => {
-                return (
-                  <div className="card" key={`hightlight-${project.slug}`}>
-                    <time>{project.date}</time>
-                    <a
-                      href={`https://github.com/taniarascia/${project.slug}`}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {project.name}
-                    </a>
-                    <p>{project.tagline}</p>
-                    <div className="card-links">
-                      {project.writeup && (
-                        <Link className="button small" to={project.writeup}>
-                          Article
-                        </Link>
-                      )}
-                      <a
-                        className="button small"
-                        href={project.url}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        Demo
-                      </a>
-                    </div>
-                  </div>
-                )
-              })}
           </div>
         </section>
       </PageLayout>

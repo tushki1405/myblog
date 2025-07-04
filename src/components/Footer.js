@@ -1,18 +1,18 @@
 import React from 'react'
 
-import netlify from '../../content/thumbnails/netlify.png'
+import netlify from '../../content/thumbnails/konami.webp'
 import gatsby from '../assets/gatsby.png'
 import github from '../assets/nav-github.png'
 
 const links = [
-  { url: 'https://taniarascia.substack.com', label: 'Email signup' },
-  { url: 'https://www.taniarascia.com/rss.xml', label: 'RSS feed' },
-  { url: 'https://bsky.app/profile/tania.dev', label: 'Bluesky' },
-  { url: 'https://ko-fi.com/taniarascia', label: 'Buy me a coffee' },
+  // TODO { url: 'https://taniarascia.substack.com', label: 'Email signup' },
+  { url: 'https://TODO/rss.xml', label: 'RSS feed' },
+  { url: 'https://ko-fi.com/guptatushar', label: 'Buy me a coffee' },
 ]
+
 const madeWithLinks = [
   { url: 'https://www.gatsbyjs.org', label: 'Gatsby', icon: gatsby },
-  { url: 'https://github.com/taniarascia', label: 'GitHub', icon: github },
+  { url: 'https://github.com/tushki1405', label: 'GitHub', icon: github },
   { url: 'https://www.netlify.com', label: 'Netlify', icon: netlify },
 ]
 
@@ -48,7 +48,7 @@ export const Footer = () => {
             </a>
           ))}
         </nav>
-        <div className="footer-made-by">Made with ❤️ by Tania Rascia</div>
+        <div className="footer-made-by">Made with ❤️  by Tushar Gupta</div>
       </section>
     </footer>
   )
