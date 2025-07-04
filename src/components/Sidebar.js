@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+// TODO: revert all icons
 // import react from '../../content/thumbnails/react.png'
 // import css from '../../content/thumbnails/css-new.png'
 // import js from '../../content/thumbnails/js.png'
@@ -14,80 +15,17 @@ import { Link } from 'gatsby'
 // import rss from '../../content/thumbnails/rss.png'
 
 import floppy from '../assets/floppylogo.png'
-import react from '../../content/thumbnails/konami.webp'
-import css from '../../content/thumbnails/konami.webp'
-import js from '../../content/thumbnails/konami.webp'
-import mac from '../../content/thumbnails/konami.webp'
-import mario from '../../content/thumbnails/konami.webp'
-import tn from '../../content/thumbnails/konami.webp'
-import accordion from '../../content/thumbnails/konami.webp'
-import animorphs from '../../content/thumbnails/konami.webp'
-import pc from '../../content/thumbnails/konami.webp'
-import bluesky from '../../content/thumbnails/konami.webp'
-import rss from '../../content/thumbnails/konami.webp'
+import linkedin from '../assets/linkedin.png'
+import rss from '../assets/rss.png'
 
 import monsteraLogo from '../assets/monstera.png'
 
 export const Sidebar = () => {
   const guides = [
     {
-      url: '/setting-up-a-brand-new-mac-for-development',
-      title: 'macOS Setup for Devs',
-      icon: mac,
-    },
-    {
-      url: '/overview-of-css-concepts/',
-      title: 'CSS Guidebook',
-      icon: css,
-    },
-    {
-      url: '/react-architecture-directory-structure',
-      title: 'React Architecture',
-      icon: react,
-    },
-    {
-      url: '/asynchronous-javascript-event-loop-callbacks-promises-async-await/',
-      title: 'The Event Loop',
-      icon: js,
-    },
-    {
-      url: '/topics',
-      title: 'All Topics',
-    },
-  ]
-
-  const projectWriteups = [
-    {
-      url: '/musical-instrument-web-audio-api',
-      title: 'Keyboard Accordion',
-      icon: accordion,
-    },
-    {
-      url: '/how-to-create-a-memory-game-super-mario-with-plain-javascript',
-      title: 'SNES Memory Game',
-      icon: mario,
-    },
-    {
-      url: '/writing-an-emulator-in-javascript-chip8/',
-      title: 'Chip-8 Emulator',
-      icon: js,
-    },
-    {
-      url: '/building-takenote',
-      title: 'TakeNote App',
-      icon: tn,
-    },
-  ]
-  const funStuff = [
-    {
-      url: '/animorphs',
-      title: 'The Lore of Animorphs',
-      icon: animorphs,
-    },
-    {
-      url: '/building-my-first-pc/',
-      title: 'Building My First PC',
-      icon: pc,
+      url: '/url',
+      title: 'title',
+      // icon: mac,
     },
   ]
 
@@ -114,7 +52,7 @@ export const Sidebar = () => {
               <p>
                 I'm <Link to="/me">Tushar</Link>, a software engineer who loves 
                 code, cooking, and wandering. This is where I plant ideas and 
-                stories. 🌱
+                stories.
               </p>
             </div>
           </section>
@@ -123,20 +61,12 @@ export const Sidebar = () => {
             <h2>Stay Connected</h2>
             <p className="sidebar-links">
               <a
-                href="https://taniarascia.substack.com"
+                href="https://www.linkedin.com/in/tushargupta14/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={floppy} alt="Email Newsletter" />
-                Newsletter
-              </a>
-              <a
-                href="https://go.bsky.app/SmEWb8G"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src={bluesky} alt="Bluesky" />
-                Bluesky Starter Pack
+                <img src={linkedin} alt="LinkedIn" />
+                LinkedIn
               </a>
               <a href="/rss.xml">
                 <img src={rss} alt="RSS" />
@@ -145,6 +75,7 @@ export const Sidebar = () => {
             </p>
           </section>
 
+          {/* TODO: keeping this as sample for future extensions
           <section className="sidebar-section">
             <h2>Guides</h2>
             <nav className="sidebar-menu">
@@ -159,31 +90,7 @@ export const Sidebar = () => {
                 </Link>
               ))}
             </nav>
-          </section>
-
-          <section className="sidebar-section">
-            <h2>Project Writeups</h2>
-            <nav className="sidebar-menu">
-              {projectWriteups.map((link) => (
-                <Link key={link.url} to={link.url} activeClassName="active">
-                  {link.icon && <img src={link.icon} alt={link.title} />}
-                  {link.title}
-                </Link>
-              ))}
-            </nav>
-          </section>
-
-          <section className="sidebar-section">
-            <h2>Fun Stuff</h2>
-            <nav className="sidebar-menu">
-              {funStuff.map((link) => (
-                <Link key={link.url} to={link.url} activeClassName="active">
-                  {link.icon && <img src={link.icon} alt={link.title} />}
-                  {link.title}
-                </Link>
-              ))}
-            </nav>
-          </section>
+          </section> */}
         </div>
       </div>
     </aside>

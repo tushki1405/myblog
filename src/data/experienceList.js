@@ -1,3 +1,4 @@
+// TODO: update all experiences
 export const experienceList = [
   {
     name: 'tania.dev',
